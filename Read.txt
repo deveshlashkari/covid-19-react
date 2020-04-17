@@ -1,0 +1,7 @@
+Packages used - 
+axios 
+react-chartjs-2
+react-countup
+@material-ui/core
+classnames
+chart.js

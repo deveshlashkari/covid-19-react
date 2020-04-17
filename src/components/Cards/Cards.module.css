@@ -1,0 +1,17 @@
+.container {
+  margin: 50px 0;
+}
+
+.card {
+  margin: 0 2% !important;
+}
+
+.infected {
+  border-bottom: 15px solid #fbc02d;
+}
+.recovered {
+  border-bottom: 15px solid #00e676;
+}
+.deaths {
+  border-bottom: 15px solid #ff5252;
+}
