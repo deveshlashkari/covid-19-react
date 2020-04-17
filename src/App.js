@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import ReactGA from "react-ga";
 
 import styles from "./App.module.css";
 
@@ -7,6 +8,8 @@ import Cards from "./components/Cards/Cards";
 import Chart from "./components/Chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import Covid from "./images/covid-updated.png";
+
+import Constants from "./Constants/Constants";
 
 import { fetchData } from "./api";
 
@@ -18,6 +21,8 @@ class App extends React.Component {
   };
 
   async componentDidMount() {
+    ReactGA.initialize(Constants.GA_CODE);
+    ReactGA.pageview("/");
     const fetchedData = await fetchData();
     this.setState({ data: fetchedData });
   }
