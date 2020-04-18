@@ -3,9 +3,11 @@ import { NativeSelect, FormControl } from "@material-ui/core";
 
 import Styles from "./CountryPicker.module.css";
 
+import StatesTable from "../StatesTable/StatesTable";
+
 import { fetchCountriesList } from "../../api";
 
-const CountryPicker = ({ handleCountryChange }) => {
+const CountryPicker = ({ handleCountryChange, countryName }) => {
   const [fetchedCountries, setFetchedCountries] = useState([]);
   useEffect(() => {
     const fetchCountries = async () => {
@@ -29,6 +31,13 @@ const CountryPicker = ({ handleCountryChange }) => {
           </option>
         ))}
       </NativeSelect>
+      <div style={{ textAlign: "center", marginTop: "5px" }}>
+        {countryName === "India" ? (
+          <StatesTable countryName={countryName} />
+        ) : (
+          ""
+        )}
+      </div>
     </FormControl>
   );
 };
