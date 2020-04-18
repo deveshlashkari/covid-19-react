@@ -44,7 +44,7 @@ class StatesTable extends Component {
       sort: true,
       headerStyle: () => {
         return {
-          width: "50%",
+          width: "60%",
           textAlign: "left",
           fontWeight: "600",
           fontSize: "13px",
@@ -60,33 +60,7 @@ class StatesTable extends Component {
         verticalAlign: "middle",
       },
     },
-    {
-      dataField: "lastUpdate",
-      text: "Last updated on",
-      sort: true,
-      headerStyle: () => {
-        return {
-          width: "50%",
-          textAlign: "left",
-          fontWeight: "600",
-          fontSize: "13px",
-          color: "#595d6e",
-          verticalAlign: "middle",
-        };
-      },
-      style: {
-        textAlign: "left",
-        fontWeight: "300",
-        fontSize: "13px",
-        color: "#595d6e",
-        verticalAlign: "middle",
-      },
-      formatter: (cell, row) => {
-        let dateArray = cell.split(" ");
 
-        return dateArray[0];
-      },
-    },
     {
       dataField: "confirmedCases",
       text: "Confirmed",
@@ -102,7 +76,7 @@ class StatesTable extends Component {
         };
       },
       style: {
-        textAlign: "left",
+        textAlign: "center",
         fontWeight: "300",
         fontSize: "13px",
         color: "#595d6e",
@@ -113,6 +87,7 @@ class StatesTable extends Component {
       dataField: "activeCases",
       text: "Active",
       sort: true,
+
       headerStyle: () => {
         return {
           width: "50%",
@@ -159,7 +134,7 @@ class StatesTable extends Component {
       sort: true,
       headerStyle: () => {
         return {
-          width: "50%",
+          width: "30%",
           textAlign: "left",
           fontWeight: "600",
           fontSize: "13px",
