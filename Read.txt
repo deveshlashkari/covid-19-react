@@ -5,3 +5,6 @@ react-countup
 @material-ui/core
 classnames
 chart.js
+reactstrap
+bootstrap-table-next
+bootstrap
