@@ -52,7 +52,7 @@ export const fetchStateData = async () => {
   try {
     const {
       data: { statewise },
-    } = await axios.get("https://api.covid19india.org/data.json");
+    } = await axios.get(Constants.BASE_URL_INDIA);
 
     const modifiedStateData = statewise.map((stateData) => ({
       stateName: stateData.state,
